@@ -14,10 +14,15 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
     
 # 1. Self-development
 
-## 1.1 Datacamp
+## 1.1. Datacamp
 
-### 1.1.1 Assessments
+### 1.1.1. Assessments
 
 ![Datacamp assessments results](./Datacamp/assessments_results.png)
 
-### 1.1.2 Projects
+### 1.1.2. Projects
+- [Introduction to DataCamp Projects](./Datacamp/Projects/Introduction%20to%20DataCamp%20Projects/notebook.ipynb)
+- [TV, Halftime Shows, and the Big Game](./Datacamp/Projects/TV,%20Halftime%20Shows,%20and%20the%20Big%20Game/notebook.ipynb)
+- [The Github History of the Scala Language](./Datacamp/Projects/The%20GitHub%20History%20of%20the%20Scala%20Language/notebook.ipynb)
+- [Exploring the Evolution of Linux](./Datacamp/Projects/Exploring%20the%20Evolution%20of%20Linux/notebook.ipynb)
+- [Exploring 67 years of LEGO](./Datacamp/Projects/Exploring%2067%20years%20of%20LEGO/notebook.ipynb)
