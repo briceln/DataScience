@@ -21,6 +21,13 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
 
 ![Datacamp assessments results](./Datacamp/assessments_results.png)
 
+### 1.1.2. Projects
+- [Introduction to DataCamp Projects](./Datacamp/Projects/Introduction%20to%20DataCamp%20Projects/notebook.ipynb)
+- [TV, Halftime Shows, and the Big Game](./Datacamp/Projects/TV,%20Halftime%20Shows,%20and%20the%20Big%20Game/notebook.ipynb)
+- [The Github History of the Scala Language](./Datacamp/Projects/The%20GitHub%20History%20of%20the%20Scala%20Language/notebook.ipynb)
+- [Exploring the Evolution of Linux](./Datacamp/Projects/Exploring%20the%20Evolution%20of%20Linux/notebook.ipynb)
+- [Exploring 67 years of LEGO](./Datacamp/Projects/Exploring%2067%20years%20of%20LEGO/notebook.ipynb)
+
 ## 1.2. Books
 
 - !["Introduction to Machine Learning with Python"](https://books.google.nl/books/content?id=1-4lDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73odAX4a5uPv1Ev708Mhi-A6-98uDKlUC6JE9aC5AaP5dCvnvqTJkPF6yIbqzGMpiP7l1Bz_NG4vMQLCPB4jFx2BDbX3ZGIPj4cStYJIijug_r0fsLaEEA4Gp7UG5m-pYMVnnw7)  
@@ -30,10 +37,3 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
 - !["Data Science from Scratch"](https://s.s-bol.com/imgbase0/imagebase3/small/FC/8/8/3/6/9200000042106388.jpg)  
     *Data Science from Scratch*   
     *Author: Joel Grus*
-
-### 1.1.2. Projects
-- [Introduction to DataCamp Projects](./Datacamp/Projects/Introduction%20to%20DataCamp%20Projects/notebook.ipynb)
-- [TV, Halftime Shows, and the Big Game](./Datacamp/Projects/TV,%20Halftime%20Shows,%20and%20the%20Big%20Game/notebook.ipynb)
-- [The Github History of the Scala Language](./Datacamp/Projects/The%20GitHub%20History%20of%20the%20Scala%20Language/notebook.ipynb)
-- [Exploring the Evolution of Linux](./Datacamp/Projects/Exploring%20the%20Evolution%20of%20Linux/notebook.ipynb)
-- [Exploring 67 years of LEGO](./Datacamp/Projects/Exploring%2067%20years%20of%20LEGO/notebook.ipynb)
