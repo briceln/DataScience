@@ -55,14 +55,13 @@ To manage the project, we use the scrum method.
 ## 2.1. Azure DevOps
 We decided to use Azure DevOps because we can use the Azure's Scrum Board and use the Azure's repository together. So, we can follow which commit is link to which task.
 
-
-Here is a view of the scrum board:
-<details><summary>Here is a view of the scrum board <img src="http://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG32.png" alt="Uitroepteken" width="16" height="16"></summary>
-  <img src="./res/img/azure-scrum-board.png" alt="">
+<details><summary>Here is a view of the scrum board (Click to show the picture) <img src="http://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG32.png" alt="Uitroepteken" width="16" height="16"></summary>
+  <img src="./res/img/azure-scrum-board.png" alt="Azure Scrum Board View">
 </details>
 
-Here is a view of the tasks for the Sprint 2 (from 17th September to 27th September):
-![Azure Scrum Sprint View](./res/img/azure-scrum-sprint.png)
+<details><summary>Here is a view of the tasks for the Sprint 2 (from 17th September to 27th September) (Click to show the picture) <img src="http://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG32.png" alt="Uitroepteken" width="16" height="16"></summary>
+  <img src="./res/img/azure-scrum-sprint.png" alt="Azure Scrum Sprint View">
+</details>
 
 # 3. Project Introduction
 
