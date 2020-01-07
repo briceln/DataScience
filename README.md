@@ -40,11 +40,11 @@ Here is the list of the Datacamp projects:
 
 ## 1.2. Books
 
-- !["Introduction to Machine Learning with Python"](https://books.google.nl/books/content?id=1-4lDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73odAX4a5uPv1Ev708Mhi-A6-98uDKlUC6JE9aC5AaP5dCvnvqTJkPF6yIbqzGMpiP7l1Bz_NG4vMQLCPB4jFx2BDbX3ZGIPj4cStYJIijug_r0fsLaEEA4Gp7UG5m-pYMVnnw7)  
+- !["Introduction to Machine Learning with Python"](./res/img/book1.jpeg)  
     *Introduction to Machine Learning with Python*  
     *Authors: Andreas C. Müller, Sarah Guido*
     
-- !["Data Science from Scratch"](https://s.s-bol.com/imgbase0/imagebase3/small/FC/8/8/3/6/9200000042106388.jpg)  
+- !["Data Science from Scratch"](./res/img/book2.jpg)  
     *Data Science from Scratch*   
     *Author: Joel Grus*
     
@@ -69,6 +69,8 @@ We decided to use Azure DevOps because we can use the Azure's Scrum Board and us
 
 The 'Flock of Birds' system output a file with the coordinates of each bone and their rotation matrix.  
 The LUMC convert the output file of the 'Flock of Birds' system to a file that contain for each row the euler angles of each bones by following the Wu standard.
+
+
 
 | Term  | Meaning  |
 |---|---|
