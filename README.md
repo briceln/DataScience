@@ -66,6 +66,19 @@ Here is a view of the tasks for the Sprint 2 (from 17th September to 27th Septem
 
 ## 3.1 Dictionary
 
+The 'Flock of Birds' system output a file with the coordinates of each bone and their rotation matrix.  
+The LUMC convert the output file of the 'Flock of Birds' system to a file that contain for each row the euler angles of each bones by following the Wu standard.
+
+| Term  | Meaning  |
+|---|---|
+| RAW Data | Data output by the 'Flock of Birds' system |
+| Convert Data | Data after the conversion made by the LUMC |
+| Cleaned Data | Data after the split of files that contains multiple times an exercise |
+
+
+Bones:   
+![Skeleton](./res/img/skeleton.png)
+
 Different exercises:
 
 | Term  | Meaning  | Visualisation  |
@@ -76,7 +89,7 @@ Different exercises:
 | EL  |   |   |
 | RF  | Retroflection  |   |
 
-# Split the data
+## Split the data
 
 We choose to split all the files that contains multiple times of one exercise.
 
