@@ -16,6 +16,8 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
 - [3. Project](#3-project)
     - [1. Introduction](#31-introduction)
         - [1. Dictionary](#311-dictionary)
+            - [1. The 'Flock of Birds' system](#3111-the-flock-of-birds-system)
+            - [2. Conversion made by the LUMC](#3112-conversion-made-by-the-lumc)
     
 # 1. Self-development
 
@@ -24,8 +26,8 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
 At the begin of the 'Applied Data Science' course, we focused primarily on self-development, in particular self-development in the field of Python and machine learning by following the course of Datacamp. 
 
 ### 1.1.1. Assessments
- **Here is the progress of the Datacamp courses.**
-
+      
+**Here is the progress of the Datacamp courses:**
 ![Datacamp assessments results](./Datacamp/img/assessments_results.png)
 
 ### 1.1.2. Projects
@@ -70,7 +72,7 @@ We decided to use Azure DevOps because we can use the Azure's Scrum Board and us
 
 ### 3.1.1 Dictionary
 
-#### The 'Flock of Birds' system
+#### 3.1.1.1 The 'Flock of Birds' system
 
 The 'Flock of Birds' system is a magnetic tracking system that allow to track the bones of one person.
 This system output a file with the coordinates of each bone and their rotation matrix.   
@@ -86,7 +88,18 @@ For this project, 7 sensors are used to follow the different bones of the upper 
 Here is the position of the 7 sensors used, represent by the dots:
 ![Skeleton](./res/img/skeleton.png)
 
-### Conversion made by the LUMC
+
+Different exercises:
+
+| Term  | Meaning  | Visualisation  |
+|---|---|---|
+| AB  | Abduction  |   |
+| AF  |   |   |
+| EH  |   |   |
+| EL  |   |   |
+| RF  | Retroflection  |   |
+
+### 3.1.1.2 Conversion made by the LUMC
 
 The LUMC convert the output file of the 'Flock of Birds' system to a file that contain for each row the euler angles of each bones by following the Wu standard.
 This standard is defined in the [Journal of Biomechanics 38 (2005) 981–992](./res/pdf/Wu%20et%20al%20J%20Biomech%2038%20(2005)%20981–992.pdf).
@@ -99,15 +112,10 @@ In this project, we used 3 types of data, here is the meaning:
 | Convert Data | Data after the conversion made by the LUMC |
 | Cleaned Data | Data after the split of files that contains multiple times an exercise |
 
-Different exercises:
 
-| Term  | Meaning  | Visualisation  |
-|---|---|---|
-| AB  | Abduction  |   |
-| AF  |   |   |
-| EH  |   |   |
-| EL  |   |   |
-| RF  | Retroflection  |   |
+## Multiple exercises detection script
+
+
 
 ## Split the data
 
