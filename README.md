@@ -13,8 +13,9 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
     - [2. Books](#12-books)
 - [2. Project Management](#2-project-management)
     - [1. Azure DevOps](#21-azure-devops)
-- [3. Project introduction](#3-project-introduction)
-    - [1. Dictionary](#31-dictionary)
+- [3. Project](#3-project)
+    - [1. Introduction](#31-introduction)
+        - [1. Dictionary](#311-dictionary)
     
 # 1. Self-development
 
@@ -63,24 +64,40 @@ We decided to use Azure DevOps because we can use the Azure's Scrum Board and us
   <img src="./res/img/azure-scrum-sprint.png" alt="Azure Scrum Sprint View">
 </details>
 
-# 3. Project Introduction
+# 3. Project
 
-## 3.1 Dictionary
+## 3.1 Introduction
 
-The 'Flock of Birds' system output a file with the coordinates of each bone and their rotation matrix.  
+### 3.1.1 Dictionary
+
+#### The 'Flock of Birds' system
+
+The 'Flock of Birds' system is a magnetic tracking system that allow to track the bones of one person.
+This system output a file with the coordinates of each bone and their rotation matrix.   
+Here is an example of the data:   
+![Example of RAW Data](./res/img/raw-data-ex.png)
+
+- The number in the black square is the sensor number.
+- The numbers in the red square are the position matrix.
+- The numbers in the blue square are the rotation matrix.
+
+All the sensor of the 'Flock of Birds' system are put in specific part of the body.
+For this project, 7 sensors are used to follow the different bones of the upper body.    
+Here is the position of the 7 sensors used, represent by the dots:
+![Skeleton](./res/img/skeleton.png)
+
+### Conversion made by the LUMC
+
 The LUMC convert the output file of the 'Flock of Birds' system to a file that contain for each row the euler angles of each bones by following the Wu standard.
+This standard is defined in the [Journal of Biomechanics 38 (2005) 981–992](./res/pdf/Wu%20et%20al%20J%20Biomech%2038%20(2005)%20981–992.pdf).
 
-
+In this project, we used 3 types of data, here is the meaning:
 
 | Term  | Meaning  |
 |---|---|
 | RAW Data | Data output by the 'Flock of Birds' system |
 | Convert Data | Data after the conversion made by the LUMC |
 | Cleaned Data | Data after the split of files that contains multiple times an exercise |
-
-
-Bones:   
-![Skeleton](./res/img/skeleton.png)
 
 Different exercises:
 
