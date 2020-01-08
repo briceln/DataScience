@@ -124,4 +124,5 @@ To do this, I made this for each files in the dataset:
     - If the movement is made 1 time:
         - Set the value of the column 'Contains multiple exercises' to 'NO'.
 
+Here is the [result](./res/sheet/Patients.xlsx).  
 *Only the file named as AB, AF, EH, EL & RF
