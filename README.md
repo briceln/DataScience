@@ -2,7 +2,7 @@
 
 Welcome to the portfolio of Brice Lang-Nguyen,
  
-This portfolio will describe all the activities that I participated in / did in the minor Applied Data science - KB74 (in the period from September 2019 to December 2019).
+This portfolio will describe all the activities that I participated in / did in the minor Applied Data science - KB74 (in the period from September 2019 to January 2020).
 In this minor, I worked in a team of 7 fellow students and one teacher on a research project for the LUMC.
 
 # Table of Contents
@@ -58,11 +58,11 @@ To manage the project, we use the scrum method.
 ## 2.1. Azure DevOps
 We decided to use Azure DevOps because we can use the Azure's Scrum Board and use the Azure's repository together. So, we can follow which commit is link to which task.
 
-<details><summary>Here is a view of the scrum board (Click to show the picture) <img src="http://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG32.png" alt="Uitroepteken" width="16" height="16"></summary>
+<details><summary>Here is a view of the scrum board (Click to show the picture) <img src="http://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG32.png" alt="warning sign" width="16" height="16"></summary>
   <img src="./res/img/azure-scrum-board.png" alt="Azure Scrum Board View">
 </details>
 
-<details><summary>Here is a view of the tasks for the Sprint 2 (from 17th September to 27th September) (Click to show the picture) <img src="http://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG32.png" alt="Uitroepteken" width="16" height="16"></summary>
+<details><summary>Here is a view of the tasks for the Sprint 2 (from 17th September to 27th September) (Click to show the picture) <img src="http://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG32.png" alt="warning sign" width="16" height="16"></summary>
   <img src="./res/img/azure-scrum-sprint.png" alt="Azure Scrum Sprint View">
 </details>
 
@@ -104,7 +104,7 @@ Different exercises:
 The LUMC convert the output file of the 'Flock of Birds' system to a file that contain for each row the euler angles of each bones by following the Wu standard.
 This standard is defined in the [Journal of Biomechanics 38 (2005) 981–992](./res/pdf/Wu%20et%20al%20J%20Biomech%2038%20(2005)%20981–992.pdf).
 
-In this project, we used 3 types of data, here is the meaning:
+In this project, we used 3 types of data, here is there meaning:
 
 | Term  | Meaning  |
 |---|---|
