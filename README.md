@@ -2,7 +2,7 @@
 
 Welcome to the portfolio of Brice Lang-Nguyen,
  
-This portfolio will describe all the activities that I participated in / did in the minor Applied Data science - KB74 (in the period from September 2019 to January 2020).
+This portfolio will describe all the activities that I did in the minor Applied Data science - KB74 (in the period from September 2019 to January 2020).
 In this minor, I worked in a team of 7 fellow students and one teacher on a research project for the LUMC.
 
 # Table of Contents
@@ -18,6 +18,7 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
         - [1. Dictionary](#311-dictionary)
             - [1. The 'Flock of Birds' system](#3111-the-flock-of-birds-system)
             - [2. Conversion made by the LUMC](#3112-conversion-made-by-the-lumc)
+    - [. Presentation](#presentations)
     
 # 1. Self-development
 
@@ -134,15 +135,17 @@ To do this, I made this for each files in the dataset:
 - Check If the movement is made more than 1 time:
     - If the movement is made more than 1 time:
         - Set the value of the column 'Contains multiple exercises' to 'YES'.
-        - Use the visualisation of the euler axis to get the frame where we need to split the file.
+        - Use the visualisation of the euler axis to get the frame(s) where we need to split the file.
     - If the movement is made 1 time:
         - Set the value of the column 'Contains multiple exercises' to 'NO'.
+- If the file contains some anomalies like the sensor ground moving or that the sensors have only been placed on one side of the individual, then write the observations in the 'Annotations' column.
+- Finally, set the column 'Check' to 'YES'. This is just to track where we are in the file check.
 
-Here is the [result](./res/sheet/Patients.xlsx).  
+Here is the [result in Excel format](./res/sheet/Patients.xlsx).  
 *Only the file named as AB, AF, EH, EL & RF
 
 
 ## Presentations
 
-During each sprint we gave two presentations as a group, one every week. I myself made the following presentation with a team member:
+During each sprint we gave some presentations as a group, one every week. I myself made the following presentation with a team member:
 - [Presentation week 14](./res/presentations/16-december.pptx)
