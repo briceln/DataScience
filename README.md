@@ -88,6 +88,12 @@ For this project, 7 sensors are used to follow the different bones of the upper 
 Here is the position of the 7 sensors used, represent by the dots:
 ![Skeleton](./res/img/skeleton.png)
 
+In this project, there are also terms used by the medical field, which can be seen below.
+![Planes of movement](./res/img/planes-of-movement.png)  
+© WJEC CBAC LTD 2016 - [Website link](http://resource.download.wjec.co.uk.s3.amazonaws.com/vtc/2015-16/15-16_30/eng/06-pivotal-kick/Unit6-analysis-of-movement.html)
+
+For this project, we need to keep in mind that the 'left' and 'right' are always used from the perspective of the patient. This is independent of the plane of the view.
+So the right arm is always the arm that the patient considers to be 'his right arm'.
 
 Different exercises:
 
@@ -134,3 +140,9 @@ To do this, I made this for each files in the dataset:
 
 Here is the [result](./res/sheet/Patients.xlsx).  
 *Only the file named as AB, AF, EH, EL & RF
+
+
+## Presentations
+
+During each sprint we gave two presentations as a group, one every week. I myself made the following presentation with a team member:
+- [Presentation week 14](./res/presentations/16-december.pptx)
