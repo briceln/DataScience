@@ -10,7 +10,8 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
     - [1. Datacamp](#11-datacamp)
         - [1. Assessments](#111-assessments)
         - [2. Projects](#112-projects)
-    - [2. Books](#12-books)
+    - [2. Openclassrooms](#12-openclassrooms)
+    - [3. Books](#13-books)
 - [2. Project Management](#2-project-management)
     - [1. Azure DevOps](#21-azure-devops)
 - [3. Project](#3-project)
@@ -42,7 +43,9 @@ Here is the list of the Datacamp projects:
 - [Exploring the Evolution of Linux](./Datacamp/Projects/Exploring%20the%20Evolution%20of%20Linux/notebook.ipynb)
 - [Exploring 67 years of LEGO](./Datacamp/Projects/Exploring%2067%20years%20of%20LEGO/notebook.ipynb)
 
-## 1.2. Books
+## 1.2 Openclassrooms
+
+## 1.3. Books
 
 - !["Introduction to Machine Learning with Python"](./res/img/book1.jpeg)  
     *Introduction to Machine Learning with Python*  
