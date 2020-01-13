@@ -45,6 +45,13 @@ Here is the list of the Datacamp projects:
 
 ## 1.2 Openclassrooms
 
+Openclassrooms is a website like Udemy but it's free.
+I follow some courses:
+  - Initiation in Machine Learning
+  - Begin with Python
+
+I use this website because there some QCM at the end of every chapter.
+
 ## 1.3. Books
 
 - !["Introduction to Machine Learning with Python"](./res/img/book1.jpeg)  
@@ -125,7 +132,7 @@ In this project, we used 3 types of data, here is there meaning:
 
 ## Multiple exercises detection script
 
-
+The Notebook can be found [here](./res/notebooks/Multiple%20Exercises%20Detection.ipynb)
 
 ## Split the data
 
