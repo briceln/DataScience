@@ -106,20 +106,12 @@ In this project, there are also terms used by the medical field, which can be se
 For this project, we need to keep in mind that the 'left' and 'right' are always used from the perspective of the patient. This is independent of the plane of the view.
 So the right arm is always the arm that the patient considers to be 'his right arm'.
 
-Different exercises:
-
-| Term  | Meaning  | Visualisation  |
-|---|---|---|
-| AB  | Abduction  |   |
-| AF  |   |   |
-| EH  |   |   |
-| EL  |   |   |
-| RF  | Retroflection  |   |
-
 ### 3.1.1.2 Conversion made by the LUMC
 
 The LUMC convert the output file of the 'Flock of Birds' system to a file that contain for each row the euler angles of each bones by following the Wu standard.
 This standard is defined in the [Journal of Biomechanics 38 (2005) 981–992](./res/pdf/Wu%20et%20al%20J%20Biomech%2038%20(2005)%20981–992.pdf).
+
+### 3.1.1.3 The Dataset
 
 In this project, we used 3 types of data, here is there meaning:
 
@@ -129,6 +121,7 @@ In this project, we used 3 types of data, here is there meaning:
 | Convert Data | Data after the conversion made by the LUMC |
 | Cleaned Data | Data after the split of files that contains multiple times an exercise |
 
+At the beginning of the project, we had access to the dataset of the previous group.
 
 ## Multiple exercises detection script
 
@@ -139,6 +132,9 @@ The Notebook can be found [here](./res/notebooks/Multiple%20Exercises%20Detectio
 We choose to split all the files that contains multiple times of one exercise.
 
 To do this, I use the 3D Visualisation made by Raphaël and the visualisation of all the axis made by myself.
+
+/!\ Mettre des images des visualisation et notebook pour la visualisation
+
 
 To do this, I made this for each files in the dataset:
 - Use the 3D Visualisation of the raw file.
@@ -154,6 +150,14 @@ To do this, I made this for each files in the dataset:
 Here is the [result in Excel format](./res/sheet/Patients.xlsx).  
 *Only the file named as AB, AF, EH, EL & RF
 
+
+## Convolutional neural network (CNN) - Data augmentation
+
+In addition to validating the results of the previous group, we started looking for another technique of machine learning. We chose to explore what convolutional neural networks (CNN) could do with our dataset.
+
+
+The script can be found [here](./res/scripts/data_augmentation.py)
+The notebook can be found [here](./res/notebooks/Data%20Augmentation%20-%20CNN.ipynb)
 
 ## Presentations
 
