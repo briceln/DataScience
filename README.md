@@ -2,7 +2,8 @@
 
 Welcome to the portfolio of Brice Lang-Nguyen,
  
-This portfolio will describe all the activities that I did in the minor Applied Data science - KB74 (in the period from September 2019 to January 2020).
+This portfolio will describe all the activities that I did in the minor Applied Data science - KB74 (in the period from September 2019 to January 2020) at The Hague University of Applied Science.
+![The Hague University of Applied Science](./res/img/svgexport-41.svg)    
 In this minor, I worked in a team of 7 fellow students and one teacher on a research project for the LUMC.
 
 # Table of Contents
