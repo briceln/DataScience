@@ -170,7 +170,7 @@ Here is a sample of the Excel:
 | 3	| RF1	| YES	| 2	| YES	| 0 | 70  |	71  |	end
 | 3	| EH1	| YES	| 2	| YES	| 0	| 58  |	59	|   end 		
 | 3	| AF1	| YES	| 3	| YES	| 0	| 155 |	156 |	225 |	226 |	end
-
+| 5 | AB1   | NO    | 0 | YES						
 
 ## Convolutional neural network (CNN) - Data augmentation
 
