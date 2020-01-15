@@ -177,7 +177,7 @@ python VisualizeExercise.py -f file/path.csv --separator=0,90,90,200,470,635
 ![Axis Visualisation (Vertical Separator)](./res/img/visualisation_vertical_separators.png)
 
 
-To do this, I made this for each files in the dataset:
+To complete this task, I made this for each files in the dataset:
 - Use the 3D Visualisation of the raw file.
 - Check If the movement is made more than 1 time:
     - If the movement is made more than 1 time:
