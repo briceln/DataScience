@@ -13,8 +13,7 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
     - [1. Datacamp](#11-datacamp)
         - [1. Assessments](#111-assessments)
         - [2. Projects](#112-projects)
-    - [2. Openclassrooms](#12-openclassrooms)
-    - [3. Books](#13-books)
+    - [2. Books](#12-books)
 - [2. Project Management](#2-project-management)
     - [1. Azure DevOps](#21-azure-devops)
 - [3. Project](#3-project)
@@ -29,6 +28,7 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
 ## 1.1. Datacamp
 
 At the begin of the 'Applied Data Science' course, we focused primarily on self-development, in particular self-development in the field of Python and machine learning by following the course of Datacamp. 
+In the first weeks, 1 day a week was dedicated to the course on datacamp. Having already programmed in Python and having already used object-oriented programming with C++. I focused myself on learning the different libraries useful for learning machine learning.
 
 ### 1.1.1. Assessments
       
@@ -37,25 +37,17 @@ At the begin of the 'Applied Data Science' course, we focused primarily on self-
 
 ### 1.1.2. Projects
 
-I also decided to do some Datacamp projects.  
+I also decided to do some Datacamp projects. I chose to do these projects to be able to improve my knowledge with the different libraries available with python like Pandas, Numpy, Matplotlib, etc.     
 Most of them are focus on data manipulation and importing & cleaning data.   
-Here is the list of the Datacamp projects:
+
+**Here is the list of the Datacamp projects:**
 - [Introduction to DataCamp Projects](./Datacamp/Projects/Introduction%20to%20DataCamp%20Projects/notebook.ipynb)
 - [TV, Halftime Shows, and the Big Game](./Datacamp/Projects/TV,%20Halftime%20Shows,%20and%20the%20Big%20Game/notebook.ipynb)
 - [The Github History of the Scala Language](./Datacamp/Projects/The%20GitHub%20History%20of%20the%20Scala%20Language/notebook.ipynb)
 - [Exploring the Evolution of Linux](./Datacamp/Projects/Exploring%20the%20Evolution%20of%20Linux/notebook.ipynb)
 - [Exploring 67 years of LEGO](./Datacamp/Projects/Exploring%2067%20years%20of%20LEGO/notebook.ipynb)
 
-## 1.2 Openclassrooms
-
-Openclassrooms is a website like Udemy but it's free.
-I follow some courses:
-  - Initiation in Machine Learning
-  - Begin with Python
-
-I use this website because there some QCM at the end of every chapter.
-
-## 1.3. Books
+## 1.2. Books
 
 - !["Introduction to Machine Learning with Python"](./res/img/book1.jpeg)  
     *Introduction to Machine Learning with Python*  
@@ -71,6 +63,7 @@ To manage the project, we use the scrum method.
 
 ## 2.1. Azure DevOps
 We decided to use Azure DevOps because we can use the Azure's Scrum Board and use the Azure's repository together. So, we can follow which commit is link to which task.
+Using Azure's scrum board, we could assign tasks to team members and track the progress of the tasks.
 
 <details><summary>Here is a view of the scrum board (Click to show the picture) <img src="http://pngimg.com/uploads/exclamation_mark/exclamation_mark_PNG32.png" alt="warning sign" width="16" height="16"></summary>
   <img src="./res/img/azure-scrum-board.png" alt="Azure Scrum Board View">
@@ -124,7 +117,8 @@ In this project, we used 3 types of data, here is there meaning:
 | Convert Data | Data after the conversion made by the LUMC |
 | Cleaned Data | Data after the split of files that contains multiple times an exercise |
 
-At the beginning of the project, we had access to the dataset of the previous group.
+At the beginning of the project, we had access to the dataset of the previous group. But after a few weeks, during the first appointment at LUMC, a researcher gave us the RAW dataset and the converted dataset with euler angles. So, that we could reproduce the steps done by the previous research group.
+
 
 ## Multiple exercises detection script
 
@@ -135,11 +129,39 @@ The script can be found [here](https://dev.azure.com/DataScienceMinor/_git/Data%
 
 We choose to split all the files that contains multiple times of one exercise.
 
-To do this, I use the 3D Visualisation made by Raphaël and the visualisation of all the axis made by myself.
+To do this, I use the 3D Visualisation made by Raphaël and the visualization of all the axis made by myself.
 
 /!\ Mettre des images des visualisation et notebook pour la visualisation
+In order to complete this task, I made a useful visualization which is able to display the 3 axes of rotation for each bone.
+
+```shell script
+Usage: VisualizeExercise.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f PATH_1,PATH_2, --file=PATH_1,PATH_2
+                        use data inside the file.
+  --lift=3              lift the data before process it.
+  -s 0,140, --separator=0,140
+                        X-axis value use to display vertical lines. Values are
+                        separate by a comma ','.
+  -l 200, --limit=200   X-axis limit.
+```
+
+Here are a few examples with the command use and the output of the script: 
+```shell script
+python VisualizeExercise.py -f file/path.csv
+```
 ![Axis Visualisation (Normal)](./res/img/visualisation_normal.png)
+
+```shell script
+python VisualizeExercise.py -f file/path.csv --lift 25
+```
 ![Axis Visualisation (Lifted)](./res/img/visualisation_lifted.png)
+
+```shell script
+python VisualizeExercise.py -f file/path.csv --separator=0,90,90,200,470,635
+```
 ![Axis Visualisation (Vertical Separator)](./res/img/visualisation_vertical_separators.png)
 
 
