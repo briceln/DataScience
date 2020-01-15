@@ -28,7 +28,7 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
 ## 1.1. Datacamp
 
 At the begin of the 'Applied Data Science' course, we focused primarily on self-development, in particular self-development in the field of Python and machine learning by following the course of Datacamp. 
-In the first weeks, 1 day a week was dedicated to the course on datacamp. Having already programmed in Python and having already used object-oriented programming with C++. I focused myself on learning the different libraries useful for learning machine learning.
+In the first weeks, 1 day a week was dedicated to the course on datacamp. Having already programmed in Python and having already used object-oriented programming with C++. I focused myself on learning the different libraries useful for learning machine learning (SKLearn and Tensorflow).
 
 ### 1.1.1. Assessments
       
@@ -48,6 +48,8 @@ Most of them are focus on data manipulation and importing & cleaning data.
 - [Exploring 67 years of LEGO](./Datacamp/Projects/Exploring%2067%20years%20of%20LEGO/notebook.ipynb)
 
 ## 1.2. Books
+
+/!\ Mettre que les livres on été proposer par tony & que j'ai lu que certains chapitre
 
 - !["Introduction to Machine Learning with Python"](./res/img/book1.jpeg)  
     *Introduction to Machine Learning with Python*  
@@ -119,6 +121,10 @@ In this project, we used 3 types of data, here is there meaning:
 
 At the beginning of the project, we had access to the dataset of the previous group. But after a few weeks, during the first appointment at LUMC, a researcher gave us the RAW dataset and the converted dataset with euler angles. So, that we could reproduce the steps done by the previous research group.
 
+# 3.2 
+
+## Figure out how the X,Y and Z planes are used in the data
+![Task on Azure Scrum Board](./res/img/task-understand-how-planes-are-used.png)
 
 ## Multiple exercises detection script
 
