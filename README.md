@@ -21,7 +21,12 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
         - [1. Dictionary](#311-dictionary)
             - [1. The 'Flock of Birds' system](#3111-the-flock-of-birds-system)
             - [2. Conversion made by the LUMC](#3112-conversion-made-by-the-lumc)
-    - [. Presentation](#presentations)
+    - [3.2 Our research](#32-our-research)
+        - [3.2.1 Figure out how the X,Y and Z planes are used in the data](#321-figure-out-how-the-xy-and-z-planes-are-used-in-the-data)
+        - [3.2.2 Multiple exercises detection script](#322-multiple-exercises-detection-script)
+        - [3.2.3 Split the data](#323-split-the-data)
+        - [3.2.4 Convolutional neural network (CNN) - Data augmentation](#324-convolutional-neural-network-cnn---data-augmentation)
+        - [3.2.5 Presentation](#325-presentations)
     
 # 1. Self-development
 
@@ -61,7 +66,11 @@ Most of them are focus on data manipulation and importing & cleaning data.
     
 # 2. Project Management
 
-To manage the project, we use the scrum method.
+To manage the project, we use the scrum method.    
+So, every day we have to do a daily stand-up to inform everyone by answering these questions:
+- What you did the day before?
+- What you have planned to do, today?
+- Do you need help?
 
 ## 2.1. Azure DevOps
 We decided to use Azure DevOps because we can use the Azure's Scrum Board and use the Azure's repository together. So, we can follow which commit is link to which task.
@@ -121,17 +130,23 @@ In this project, we used 3 types of data, here is there meaning:
 
 At the beginning of the project, we had access to the dataset of the previous group. But after a few weeks, during the first appointment at LUMC, a researcher gave us the RAW dataset and the converted dataset with euler angles. So, that we could reproduce the steps done by the previous research group.
 
-# 3.2 
+All of this data (RAW, Convert and Cleaned) are organized by patient categories which include patients and their exercises.
+```shell script
+# This is the path for the first AB exercise of the patient 1 of the Category 2
+Category_2 > 1 > AB1.csv
+```
 
-## Figure out how the X,Y and Z planes are used in the data
+# 3.2 Our research
+
+## 3.2.1 Figure out how the X,Y and Z planes are used in the data
 ![Task on Azure Scrum Board](./res/img/task-understand-how-planes-are-used.png)
 
-## Multiple exercises detection script
+## 3.2.2 Multiple exercises detection script
 
 The Notebook can be found [here](./res/notebooks/Multiple%20Exercises%20Detection.ipynb)    
 The script can be found [here](https://dev.azure.com/DataScienceMinor/_git/Data%20Science?path=%2FMutlipleExercisesDetectionV2.py)
 
-## Split the data
+## 3.2.3 Split the data
 
 After the conversion of the raw data to Euler angles, we have noticed that the category 2 and 3 contained a lot of files with several exercises.
 We wanted each file to contain only one times of an exercise and not several. This allows to have more exercises to train the model. 
@@ -219,7 +234,7 @@ Here is a sample of the Excel:
 | 3	| AF1	| YES	| 3	| YES	| 0	| 155 |	156 |	225 |	226 |	end
 | 5 | AB1   | NO    | 0 | YES						
 
-## Convolutional neural network (CNN) - Data augmentation
+## 3.2.4 Convolutional neural network (CNN) - Data augmentation
 
 In addition to validating the results of the previous group, we started looking for another technique of machine learning. We chose to explore what convolutional neural networks (CNN) could do with our dataset.
 
@@ -238,7 +253,7 @@ In addition to validating the results of the previous group, we started looking 
 The script can be found [here](./res/scripts/data_augmentation.py)          
 The notebook can be found [here](./res/notebooks/Data%20Augmentation%20-%20CNN.ipynb)
 
-## Presentations
+## 3.2.5 Presentations
 
 During each sprint we gave some presentations as a group, one every week. I myself made the following presentation with a team member:
 - [Presentation week 14](./res/presentations/16-december.pptx)
