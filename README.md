@@ -42,7 +42,8 @@ In the first weeks, 1 day a week was dedicated to the course on datacamp. Having
 
 ### 1.1.2. Projects
 
-I also decided to do some Datacamp projects. I chose to do these projects to be able to improve my knowledge with the different libraries available with python like Pandas, Numpy, Matplotlib, etc.     
+On Datacamp, you can find projects to train on machine learning techniques.  
+I chose to do these projects to be able to improve my knowledge with the different libraries available with python like Pandas, Numpy, Matplotlib, etc.     
 Most of them are focus on data manipulation and importing & cleaning data.   
 
 **Here is the list of the Datacamp projects:**
@@ -132,9 +133,11 @@ At the beginning of the project, we had access to the dataset of the previous gr
 
 All of this data (RAW, Convert and Cleaned) are organized by patient categories which include patients and their exercises.
 ```shell script
-# This is the path for the first AB exercise of the patient 1 of the Category 2
-Category_2 > 1 > AB1.csv
+# This is the path for the first AB exercise of the patient 1 of Category 2
+Category_2/1/AB1.csv
 ```
+
+### 3.1.2 Project status at the beginning of the course
 
 # 3.2 Our research
 
@@ -148,34 +151,20 @@ The script can be found [here](https://dev.azure.com/DataScienceMinor/_git/Data%
 
 ## 3.2.3 Split the data
 
-After the conversion of the raw data to Euler angles, we have noticed that the category 2 and 3 contained a lot of files with several exercises.
+Visualizing converted data showed several recordings contained more than one exercise.
 We wanted each file to contain only one times of an exercise and not several. This allows to have more exercises to train the model. 
 This led to the creation of a cleaning method for the dataset.
 
 We choose to split all the files that contains multiple times of one exercise.
 
 To do this, I use the 3D Visualisation made by Raphaël.
-Here is a gif of the visualization:
+##### Here is a gif of the visualization:
 
 ![GIF for visualization](./res/img/visualization.gif)
 
-In order to complete this task, I made a useful visualization which is able to display the 3 axes of rotation for each bone.
+In order to complete this task, I made a useful visualization which is able to display the 3 euler axes for each bone.
 
-```shell script
-Usage: VisualizeExercise.py [options]
-
-Options:
-  -h, --help            show this help message and exit
-  -f PATH_1,PATH_2, --file=PATH_1,PATH_2
-                        use data inside the file.
-  --lift=3              lift the data before process it.
-  -s 0,140, --separator=0,140
-                        X-axis value use to display vertical lines. Values are
-                        separate by a comma ','.
-  -l 200, --limit=200   X-axis limit.
-```
-
-Here are a few examples with the command use and the output of the script: 
+##### Here are a few examples with the command use and the output of the script: 
 ```shell script
 python VisualizeExercise.py -f file/path.csv
 ```
@@ -192,18 +181,19 @@ python VisualizeExercise.py -f file/path.csv --separator=0,90,90,200,470,635
 ![Axis Visualisation (Vertical Separator)](./res/img/visualisation_vertical_separators.png)
 
 
-To complete this task, I made this for each files in the dataset:
-- Use the 3D Visualisation of the raw file.
-- Check If the movement is made more than 1 time:
+To complete this task, I performed these steps for each file in the dataset:
+- Use the [3D Visualisation](#here-is-a-gif-of-the-visualization) of the raw file.
+- Check how many times the movement is made:
     - If the movement is made more than 1 time:
         - Set the value of the column 'Contains multiple exercises' to 'YES'.
-        - Use the visualisation of the euler axis to get the frame(s) where we need to split the file.
+        - Use the [visualisation](#here-are-a-few-examples-with-the-command-use-and-the-output-of-the-script) of the euler axis to get the frame(s) where we need to split the file and note in the excel sheet.
     - If the movement is made 1 time:
         - Set the value of the column 'Contains multiple exercises' to 'NO'.
 - If the file contains some anomalies like the sensor ground moving or that the sensors have only been placed on one side of the individual, then write the observations in the 'Annotations' column.
 - Finally, set the column 'Check' to 'YES'. This is just to track where we are in the file check.
 
 Here is the [result in Excel format](./res/sheet/Patients.xlsx).  
+*Only the files of the AB, AF, EH, EL & RF exercises were checked
 
 Before the split, we had:   
 
@@ -224,22 +214,25 @@ After the split, we had:
 | 3 | 362 |
 | 4 | 292 |
 
-*Only the files of the AB, AF, EH, EL & RF exercises were checked
-
-Here is a sample of the Excel:   
-
-| Patient no. |	Exercice |	Contains multiple exercices |	How many times? |	Check	| Start chunk no.1 |	End chunk no.1 |	Start chunk no.2 |	End chunk no.2 |	Start chunk no.3 |	End chunk no.3 |
-|-------------|----------|------------------------------|-------------------|-----------|------------------|-------------------|---------------------|-----------------|---------------------|-----------------|
-| 1 | AB1   | YES   | 2	| YES	| 0 | 190 |	191 |	end			
-| 3	| AF1	| YES	| 3	| YES	| 0	| 155 |	156 |	225 |	226 |	end
-| 5 | AB1   | NO    | 0 | YES						
+By splitting the files the number of exercises for categories 2 and 3 was almost doubled.
 
 ## 3.2.4 Convolutional neural network (CNN) - Data augmentation
 
 In addition to validating the results of the previous group, we started looking for another technique of machine learning. We chose to explore what convolutional neural networks (CNN) could do with our dataset.
 
-/!\ Expliquer ce qu'est le data augmentation
+Hassane was working on that task and he was faced with a overfitting problem with his model.
+He asked me to help him to implement some data augmentation techniques.
+We chose to use data augmentation techniques to fix the overfitting issue because the dataset was too small to be use with a Convolutional neural network.
 
+The goal of data augmentation is to increase the amount of data by using techniques like cropping, padding, flipping, etc.
+Data augmentation makes the model more robust to slight variations, and hence prevents the model from overfitting.
+
+Before implementing data augmentation in the project. I made a small script to understand how it's works and in what way we can implement those techniques.
+
+The script can be found [here](./res/scripts/data_augmentation.py)          
+The notebook can be found [here](./res/notebooks/Data%20Augmentation%20-%20CNN.ipynb)
+
+Script results:
 #### Original image:
 ![Data augmentation - Original Skeleton](./res/img/skeleton.png)
 
@@ -247,11 +240,29 @@ In addition to validating the results of the previous group, we started looking 
 
 ![Data augmentation - Results of the augmentation](./res/img/data_augmentation.png)
 
-/!\ Expliquer comment le script a été implémenter          
-/!\ Et les résultats obtenus
+Here is the code used for the CNN (Code extracted from the file [dataAug.py](./res/scripts/dataAug.py))
+```python
+def data_Augment(data_generator, images, limit=10):
+    """
+    Generates n image from an image by applying various transformations such as rotation, zoom, etc.
+    :param data_generator: ImageDataGenerator
+    :param limit: Number of images to generate
+    :return: Array of picture
+    """
+    data_generator.fit(images)
+    image_iterator = data_generator.flow(images)
+    genarated_data = np.array([image_iterator.next()[0]])
+    limit -= 1
+    for image in image_iterator:
+        # genarated_data = np.append((genarated_data, [image[0]]), axis=0)
+        genarated_data = np.append(genarated_data, [image[0]], axis=0)
+        limit -= 1
+        if limit <= 0:
+            break
+    
 
-The script can be found [here](./res/scripts/data_augmentation.py)          
-The notebook can be found [here](./res/notebooks/Data%20Augmentation%20-%20CNN.ipynb)
+    return genarated_data
+```
 
 ## 3.3 Presentations
 
