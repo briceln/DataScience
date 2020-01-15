@@ -138,6 +138,9 @@ We choose to split all the files that contains multiple times of one exercise.
 To do this, I use the 3D Visualisation made by Raphaël and the visualisation of all the axis made by myself.
 
 /!\ Mettre des images des visualisation et notebook pour la visualisation
+![Axis Visualisation (Normal)](./res/img/visualisation_normal.png)
+![Axis Visualisation (Lifted)](./res/img/visualisation_lifted.png)
+![Axis Visualisation (Vertical Separator)](./res/img/visualisation_vertical_separators.png)
 
 
 To do this, I made this for each files in the dataset:
@@ -158,20 +161,7 @@ Here is a sample of the Excel:
 
 | Patient no. |	Exercice |	Contains multiple exercices |	How many times? |	Check	| Start chunk no.1 |	End chunk no.1 |	Start chunk no.2 |	End chunk no.2 |	Start chunk no.3 |	End chunk no.3 |
 |-------------|----------|------------------------------|-------------------|-----------|------------------|-------------------|---------------------|-----------------|---------------------|-----------------|
-| 1 | AB1   | YES   | 2	| YES	| 0 | 190 |	191 |	end	
-| 1	| EL1	| YES	| 2	| YES	| 0	| 100 | 101 | 	end
-| 1	| AF1	| YES	| 2	| YES	| 0	| 90  |	91  |	end		
-| 1	| RF1	| YES	| 2	| YES	| 0	| 85  |	86  |	end		
-| 1	| EH1	| YES	| 2	| YES	| 0	| 49  | 50  |	end		
-| 2	| AF1	| YES	| 2	| YES	| 0	| 185 |	186 |	end		
-| 2	| EL1	| YES	| 2	| YES	| 0	| 100 |	101 |	end		
-| 2	| EH1	| YES	| 2	| YES	| 0	| 90  |	91  |	end		
-| 2	| AB1	| YES	| 2	| YES	| 0	| 80  |	81  |	end		
-| 2	| RF1	| YES	| 2	| YES	| 0	| 60  |	61  |	end		
-| 3	| AB1	| YES	| 2	| YES	| 0	| 90  |	91  |	end		
-| 3	| EL1	| YES	| 2	| YES	| 0	| 90  |	91  |	end		
-| 3	| RF1	| YES	| 2	| YES	| 0 | 70  |	71  |	end
-| 3	| EH1	| YES	| 2	| YES	| 0	| 58  |	59	|   end 		
+| 1 | AB1   | YES   | 2	| YES	| 0 | 190 |	191 |	end			
 | 3	| AF1	| YES	| 3	| YES	| 0	| 155 |	156 |	225 |	226 |	end
 | 5 | AB1   | NO    | 0 | YES						
 
@@ -179,6 +169,14 @@ Here is a sample of the Excel:
 
 In addition to validating the results of the previous group, we started looking for another technique of machine learning. We chose to explore what convolutional neural networks (CNN) could do with our dataset.
 
+/!\ Expliquer ce qu'est le data augmentation
+
+![Data augmentation - Original Skeleton](./res/img/skeleton.png)
+
+![Data augmentation - Results of the augmentation](./res/img/data_augmentation.png)
+
+/!\ Expliquer comment le script a été implémenter
+/!\ Et les résultats obtenus
 
 The script can be found [here](./res/scripts/data_augmentation.py)          
 The notebook can be found [here](./res/notebooks/Data%20Augmentation%20-%20CNN.ipynb)
