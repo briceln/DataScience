@@ -86,6 +86,7 @@ if __name__ == '__main__':
             file_data = tmp_df
 
         fig = plt.figure(filenames[file_index])
+        fig.suptitle('Visualization of the axes for each bone', fontsize=16)
 
         if not options.limit:
             row_count = 0
@@ -112,6 +113,11 @@ if __name__ == '__main__':
             # Add label on the left of the graph
             if int(get_body_part_index(index)) < 5:
                 ax.set_ylabel(k[:k.find('_')])
+            # Add labels on top of the graph
+            if int(get_body_part_index(index)) == 0:
+                ax.set_title('right')
+            if int(get_body_part_index(index)) == 5:
+                ax.set_title('left')
 
     plt.tight_layout()
     plt.legend()
