@@ -171,11 +171,14 @@ In addition to validating the results of the previous group, we started looking 
 
 /!\ Expliquer ce qu'est le data augmentation
 
+#### Original image:
 ![Data augmentation - Original Skeleton](./res/img/skeleton.png)
+
+#### Generated images:
 
 ![Data augmentation - Results of the augmentation](./res/img/data_augmentation.png)
 
-/!\ Expliquer comment le script a été implémenter
+/!\ Expliquer comment le script a été implémenter          
 /!\ Et les résultats obtenus
 
 The script can be found [here](./res/scripts/data_augmentation.py)          
