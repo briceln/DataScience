@@ -21,12 +21,12 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
         - [1. Dictionary](#311-dictionary)
             - [1. The 'Flock of Birds' system](#3111-the-flock-of-birds-system)
             - [2. Conversion made by the LUMC](#3112-conversion-made-by-the-lumc)
-    - [3.2 Our research](#32-our-research)
-        - [3.2.1 Figure out how the X,Y and Z planes are used in the data](#321-figure-out-how-the-xy-and-z-planes-are-used-in-the-data)
-        - [3.2.2 Multiple exercises detection script](#322-multiple-exercises-detection-script)
-        - [3.2.3 Split the data](#323-split-the-data)
-        - [3.2.4 Convolutional neural network (CNN) - Data augmentation](#324-convolutional-neural-network-cnn---data-augmentation)
-        - [3.2.5 Presentation](#325-presentations)
+    - [2. Our research](#32-our-research)
+        - [1. Figure out how the X,Y and Z planes are used in the data](#321-figure-out-how-the-xy-and-z-planes-are-used-in-the-data)
+        - [2. Multiple exercises detection script](#322-multiple-exercises-detection-script)
+        - [3. Split the data](#323-split-the-data)
+        - [4. Convolutional neural network (CNN) - Data augmentation](#324-convolutional-neural-network-cnn---data-augmentation)
+        - [5. Presentation](#325-presentations)
     
 # 1. Self-development
 
