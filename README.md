@@ -133,11 +133,17 @@ The script can be found [here](https://dev.azure.com/DataScienceMinor/_git/Data%
 
 ## Split the data
 
+After the conversion of the raw data to Euler angles, we have noticed that the category 2 and 3 contained a lot of files with several exercises.
+We wanted each file to contain only one times of an exercise and not several. This allows to have more exercises to train the model. 
+This led to the creation of a cleaning method for the dataset.
+
 We choose to split all the files that contains multiple times of one exercise.
 
-To do this, I use the 3D Visualisation made by Raphaël and the visualization of all the axis made by myself.
+To do this, I use the 3D Visualisation made by Raphaël.
+Here is a gif of the visualization:
 
-/!\ Mettre des images des visualisation et notebook pour la visualisation
+![GIF for visualization](./res/img/visualization.gif)
+
 In order to complete this task, I made a useful visualization which is able to display the 3 axes of rotation for each bone.
 
 ```shell script
@@ -183,7 +189,27 @@ To do this, I made this for each files in the dataset:
 - Finally, set the column 'Check' to 'YES'. This is just to track where we are in the file check.
 
 Here is the [result in Excel format](./res/sheet/Patients.xlsx).  
-*Only the file named as AB, AF, EH, EL & RF
+
+Before the split, we had:   
+
+| Category no. | Number of exercises |
+|--------------|---------------------|
+| 1 | 298 |     
+| 2 | 216 |
+| 3 | 184 |
+| 4 | 291 |
+
+
+After the split, we had:    
+
+| Category no. | Number of exercises |
+|--------------|---------------------|
+| 1 | 299 |
+| 2 | 397 |
+| 3 | 362 |
+| 4 | 292 |
+
+*Only the files of the AB, AF, EH, EL & RF exercises were checked
 
 Here is a sample of the Excel:   
 
