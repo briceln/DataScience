@@ -26,7 +26,7 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
         - [2. Multiple exercises detection script](#322-multiple-exercises-detection-script)
         - [3. Split the data](#323-split-the-data)
         - [4. Convolutional neural network (CNN) - Data augmentation](#324-convolutional-neural-network-cnn---data-augmentation)
-        - [5. Presentation](#325-presentations)
+    - [3. Presentation](#33-presentations)
     
 # 1. Self-development
 
@@ -253,7 +253,7 @@ In addition to validating the results of the previous group, we started looking 
 The script can be found [here](./res/scripts/data_augmentation.py)          
 The notebook can be found [here](./res/notebooks/Data%20Augmentation%20-%20CNN.ipynb)
 
-## 3.2.5 Presentations
+## 3.3 Presentations
 
 During each sprint we gave some presentations as a group, one every week. I myself made the following presentation with a team member:
 - [Presentation week 14](./res/presentations/16-december.pptx)
