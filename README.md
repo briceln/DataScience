@@ -7,6 +7,7 @@ This portfolio will describe all the activities that I did in the minor Applied 
 ![The Hague University of Applied Science](./res/img/svgexport-41.svg)
      
 In this minor, I worked in a team of 7 fellow students and one teacher on a research project for the LUMC.
+The research report can be [found here](./res/pdf/).
 
 # Table of Contents
 - [1. Self-development](#1-self-development)
@@ -15,7 +16,8 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
         - [2. Projects](#112-projects)
     - [2. Books](#12-books)
 - [2. Project Management](#2-project-management)
-    - [1. Azure DevOps](#21-azure-devops)
+    - [1. Scrum](#21-scrum)
+    - [2. Azure DevOps](#22-azure-devops)
 - [3. Project](#3-project)
     - [1. Introduction](#31-introduction)
         - [1. Dictionary](#311-dictionary)
@@ -26,6 +28,7 @@ In this minor, I worked in a team of 7 fellow students and one teacher on a rese
         - [2. Multiple exercises detection script](#322-multiple-exercises-detection-script)
         - [3. Split the data](#323-split-the-data)
         - [4. Convolutional neural network (CNN) - Data augmentation](#324-convolutional-neural-network-cnn---data-augmentation)
+            - [Evaluation](#evaluation)
     - [3. Presentation](#33-presentations)
     
 # 1. Self-development
@@ -55,7 +58,7 @@ Most of them are focus on data manipulation and importing & cleaning data.
 
 ## 1.2. Books
 
-/!\ Mettre que les livres on été proposer par tony & que j'ai lu que certains chapitre
+I was led to read mainly, the following two books which were advised to me by Tony. I only read some chapters like Chapter 19 - Clustering of the book "Data Science from Scratch" or just the introduction of the book "Introduction to Machine Learning with Python".
 
 - !["Introduction to Machine Learning with Python"](./res/img/book1.jpeg)  
     *Introduction to Machine Learning with Python*  
@@ -67,13 +70,16 @@ Most of them are focus on data manipulation and importing & cleaning data.
     
 # 2. Project Management
 
-To manage the project, we use the scrum method.    
-So, every day we have to do a daily stand-up to inform everyone by answering these questions:
-- What you did the day before?
-- What you have planned to do, today?
-- Do you need help?
+## 2.1 Scrum
 
-## 2.1. Azure DevOps
+To manage this project, we used the Scrum framework.        
+In addition to using Scrum as a management tool, we needed to find a research question that would serve as a common thread for our research.                  
+In order to find a research question, we did some research and we all read the [research paper](https://github.com/Lukelumia/Applied-Data-Science/blob/master/paper_ortho_eyes.pdf) of the previous group. Then we discussed which direction the search should go in.               
+We chose to create search sub-questions to use them as a guideline and avoid going off-topic.       
+The selected research question can be [found here](#32-our-research)   
+
+
+## 2.2. Azure DevOps
 We decided to use Azure DevOps because we can use the Azure's Scrum Board and use the Azure's repository together. So, we can follow which commit is link to which task.
 Using Azure's scrum board, we could assign tasks to team members and track the progress of the tasks.
 
@@ -140,6 +146,12 @@ Category_2/1/AB1.csv
 ### 3.1.2 Project status at the beginning of the course
 
 # 3.2 Our research
+
+The purpose of this research is the following:
+*To what extend and in what way, can different data science techniques be used on kinematic recordings to contribute to a valid and reliable diagnosis, made by a doctor, on Musculoskeletal Disorders.*
+
+To achieve this research, we had at our disposal 2 types of dataset, RAW dataset and converted dataset.
+With the converted dataset, we created a cleaned dataset.
 
 ## 3.2.1 Figure out how the X,Y and Z planes are used in the data
 ![Task on Azure Scrum Board](./res/img/task-understand-how-planes-are-used.png)
@@ -215,6 +227,7 @@ After the split, we had:
 | 4 | 292 |
 
 By splitting the files, the number of exercises for categories 2 and 3 was almost doubled.
+This allowed us to be sure that the model is fill with 'normalized' data, i.e. the model can focus on finding the differences between the different groups of patients by presenting them with data that are in the same format, i.e. one exercise per file.
 
 ## 3.2.4 Convolutional neural network (CNN) - Data augmentation
 
@@ -463,6 +476,8 @@ test loss, test acc: [0.9874742735515941, 0.49526516]
 
 ![CNN results with data augmentation techniques - loss](./res/img/cnn_loss_with.png)
 ![CNN results with data augmentation techniques - accuracy](./res/img/cnn_acc_with.png)
+
+## Evaluation
 
 /!\ Mettre les résultats
 
