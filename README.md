@@ -283,13 +283,13 @@ OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0
 OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 0 thread 1 
 OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 thread 0 
 OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 1 thread 1 
-OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8464 thread 0 bound to OS proc set 0
-100%|█████████████████████████████████████████████████████████████████████| 30/30 [00:04<00:00,  6.69it/s]
+OMP: Info #250: KMP_AFFINITY: pid 11946 tid 11946 thread 0 bound to OS proc set 0
+100%|█████████████████████████████████████████████████████████████████████| 30/30 [00:04<00:00,  6.55it/s]
 Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_2
-100%|█████████████████████████████████████████████████████████████████████| 39/39 [00:05<00:00,  7.48it/s]
+100%|█████████████████████████████████████████████████████████████████████| 39/39 [00:05<00:00,  7.20it/s]
 Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_3
-100%|█████████████████████████████████████████████████████████████████████| 37/37 [00:04<00:00,  7.45it/s]
-OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8514 thread 1 bound to OS proc set 1
+100%|█████████████████████████████████████████████████████████████████████| 37/37 [00:05<00:00,  7.27it/s]
+OMP: Info #250: KMP_AFFINITY: pid 11946 tid 12007 thread 1 bound to OS proc set 1
 (760, 100, 16, 3) (106, 100, 16, 3) (190, 100, 16, 3)
 Model: "sequential"
 _________________________________________________________________
@@ -320,52 +320,54 @@ Trainable params: 1,703,875
 Non-trainable params: 0
 _________________________________________________________________
 Train on 760 samples, validate on 190 samples
-2020-01-16 07:15:32.798674: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+2020-01-16 07:40:26.054132: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
 To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
-2020-01-16 07:15:32.834774: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2899500000 Hz
-2020-01-16 07:15:32.834924: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5595db3ceb00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
-2020-01-16 07:15:32.834937: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
-2020-01-16 07:15:32.835329: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2020-01-16 07:40:26.078744: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2899500000 Hz
+2020-01-16 07:40:26.078884: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55c6c59c14b0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-01-16 07:40:26.078899: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-01-16 07:40:26.078992: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
 Epoch 1/20
-OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8527 thread 2 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8530 thread 3 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8531 thread 4 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8528 thread 5 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8533 thread 7 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8532 thread 6 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8534 thread 8 bound to OS proc set 0
-760/760 [==============================] - 3s 3ms/sample - loss: 1.1280 - acc: 0.3632 - val_loss: 1.0638 - val_acc: 0.4895
+OMP: Info #250: KMP_AFFINITY: pid 11946 tid 12018 thread 2 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 11946 tid 12022 thread 4 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 11946 tid 12021 thread 3 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 11946 tid 12019 thread 5 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 11946 tid 12024 thread 7 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 11946 tid 12025 thread 8 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 11946 tid 12023 thread 6 bound to OS proc set 2
+760/760 [==============================] - 2s 3ms/sample - loss: 1.2268 - acc: 0.3276 - val_loss: 1.0865 - val_acc: 0.4316
 Epoch 2/20
-760/760 [==============================] - 2s 3ms/sample - loss: 1.0356 - acc: 0.4382 - val_loss: 0.9678 - val_acc: 0.4947
+760/760 [==============================] - 2s 2ms/sample - loss: 1.0543 - acc: 0.4237 - val_loss: 0.9804 - val_acc: 0.6000
 Epoch 3/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.8914 - acc: 0.5789 - val_loss: 0.8165 - val_acc: 0.6842
+760/760 [==============================] - 2s 3ms/sample - loss: 0.9609 - acc: 0.5263 - val_loss: 0.8971 - val_acc: 0.6053
 Epoch 4/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.8133 - acc: 0.6158 - val_loss: 0.7870 - val_acc: 0.6789
+760/760 [==============================] - 2s 3ms/sample - loss: 0.8881 - acc: 0.5724 - val_loss: 0.8025 - val_acc: 0.6263
 Epoch 5/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.7812 - acc: 0.6421 - val_loss: 0.7872 - val_acc: 0.6632
+760/760 [==============================] - 2s 3ms/sample - loss: 0.8621 - acc: 0.5868 - val_loss: 0.8058 - val_acc: 0.6211
 Epoch 6/20
-760/760 [==============================] - 2s 2ms/sample - loss: 0.7448 - acc: 0.6553 - val_loss: 0.7366 - val_acc: 0.6526
+760/760 [==============================] - 2s 3ms/sample - loss: 0.8367 - acc: 0.6079 - val_loss: 0.7655 - val_acc: 0.6474
 Epoch 7/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.7103 - acc: 0.6763 - val_loss: 0.7332 - val_acc: 0.6632
+760/760 [==============================] - 2s 3ms/sample - loss: 0.7837 - acc: 0.6197 - val_loss: 0.7957 - val_acc: 0.5895
 Epoch 8/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.7010 - acc: 0.6763 - val_loss: 0.7256 - val_acc: 0.6579
+760/760 [==============================] - 2s 2ms/sample - loss: 0.7791 - acc: 0.6118 - val_loss: 0.7428 - val_acc: 0.6526
 Epoch 9/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.6654 - acc: 0.7013 - val_loss: 0.7033 - val_acc: 0.6737
+760/760 [==============================] - 2s 3ms/sample - loss: 0.7287 - acc: 0.6487 - val_loss: 0.7290 - val_acc: 0.6526
 Epoch 10/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.6250 - acc: 0.7039 - val_loss: 0.6672 - val_acc: 0.6368
+760/760 [==============================] - 2s 3ms/sample - loss: 0.7135 - acc: 0.6842 - val_loss: 0.6955 - val_acc: 0.6684
 Epoch 11/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.5614 - acc: 0.7553 - val_loss: 0.6730 - val_acc: 0.6737
+760/760 [==============================] - 2s 3ms/sample - loss: 0.6474 - acc: 0.6961 - val_loss: 0.6689 - val_acc: 0.7000
 Epoch 12/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.5396 - acc: 0.7671 - val_loss: 0.6329 - val_acc: 0.6842
+760/760 [==============================] - 2s 3ms/sample - loss: 0.6520 - acc: 0.7105 - val_loss: 0.6965 - val_acc: 0.6947
 Epoch 13/20
-760/760 [==============================] - 2s 2ms/sample - loss: 0.4940 - acc: 0.7737 - val_loss: 0.6243 - val_acc: 0.6895
-Epoch 14/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.4359 - acc: 0.8211 - val_loss: 0.6600 - val_acc: 0.6737
-Epoch 15/20
-760/760 [==============================] - 2s 3ms/sample - loss: 0.3957 - acc: 0.8382 - val_loss: 0.6418 - val_acc: 0.7053
+760/760 [==============================] - 2s 3ms/sample - loss: 0.6251 - acc: 0.7132 - val_loss: 0.6874 - val_acc: 0.7000
+190/190 - 0s - loss: 0.6874 - acc: 0.7000
+
+# Evaluate on test data
+106/106 [==============================] - 0s 1ms/sample - loss: 0.6956 - acc: 0.7075
+test loss, test acc: [0.6956483215655921, 0.7075472]
 ```
 
-![CNN results without data augmentation techniques](./res/img/cnn_result_without_data_aug.png)
+![CNN results without data augmentation techniques - loss](./res/img/cnn_loss_without.png)
+![CNN results without data augmentation techniques - acc](./res/img/cnn_acc_without.png)
 
 Results after the implementation of data augmentation techniques:
 
@@ -386,13 +388,13 @@ OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0
 OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 0 thread 1 
 OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 thread 0 
 OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 1 thread 1 
-OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8865 thread 0 bound to OS proc set 0
-100%|█████████████████████████████████████████████████████████████████████| 30/30 [00:04<00:00,  6.83it/s]
+OMP: Info #250: KMP_AFFINITY: pid 12299 tid 12299 thread 0 bound to OS proc set 0
+100%|█████████████████████████████████████████████████████████████████████| 30/30 [00:04<00:00,  6.61it/s]
 Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_2
-100%|█████████████████████████████████████████████████████████████████████| 39/39 [00:05<00:00,  7.22it/s]
+100%|█████████████████████████████████████████████████████████████████████| 39/39 [00:05<00:00,  7.10it/s]
 Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_3
-100%|█████████████████████████████████████████████████████████████████████| 37/37 [00:05<00:00,  7.13it/s]
-OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8923 thread 1 bound to OS proc set 1
+100%|█████████████████████████████████████████████████████████████████████| 37/37 [00:05<00:00,  7.32it/s]
+OMP: Info #250: KMP_AFFINITY: pid 12299 tid 12314 thread 1 bound to OS proc set 1
 (7603, 100, 16, 3) (1056, 100, 16, 3) (1901, 100, 16, 3)
 Model: "sequential"
 _________________________________________________________________
@@ -423,45 +425,44 @@ Trainable params: 1,703,875
 Non-trainable params: 0
 _________________________________________________________________
 Train on 7603 samples, validate on 1901 samples
-2020-01-16 07:21:46.158279: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+2020-01-16 07:44:50.255950: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
 To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
-2020-01-16 07:21:46.206748: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2899500000 Hz
-2020-01-16 07:21:46.207503: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55e3f0055360 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
-2020-01-16 07:21:46.207518: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
-2020-01-16 07:21:46.208483: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+2020-01-16 07:44:50.298855: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2899500000 Hz
+2020-01-16 07:44:50.299573: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55df0c7ee150 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-01-16 07:44:50.299590: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-01-16 07:44:50.300547: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
 Epoch 1/20
-OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8961 thread 2 bound to OS proc set 2
-OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8963 thread 3 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8964 thread 4 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8960 thread 5 bound to OS proc set 1
-OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8967 thread 8 bound to OS proc set 0
-OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8966 thread 7 bound to OS proc set 3
-OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8965 thread 6 bound to OS proc set 2
-7603/7603 [==============================] - 20s 3ms/sample - loss: 1.0316 - acc: 0.4557 - val_loss: 1.0056 - val_acc: 0.4887
+OMP: Info #250: KMP_AFFINITY: pid 12299 tid 12336 thread 2 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 12299 tid 12338 thread 3 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 12299 tid 12339 thread 4 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 12299 tid 12335 thread 5 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 12299 tid 12341 thread 7 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 12299 tid 12342 thread 8 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 12299 tid 12340 thread 6 bound to OS proc set 2
+7603/7603 [==============================] - 21s 3ms/sample - loss: 1.0516 - acc: 0.4351 - val_loss: 1.0137 - val_acc: 0.4555
 Epoch 2/20
-7603/7603 [==============================] - 20s 3ms/sample - loss: 1.0037 - acc: 0.4961 - val_loss: 0.9960 - val_acc: 0.5066
+7603/7603 [==============================] - 20s 3ms/sample - loss: 1.0118 - acc: 0.4755 - val_loss: 0.9936 - val_acc: 0.4924
 Epoch 3/20
-7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9889 - acc: 0.5045 - val_loss: 0.9730 - val_acc: 0.5203
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9932 - acc: 0.4936 - val_loss: 0.9986 - val_acc: 0.4940
 Epoch 4/20
-7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9735 - acc: 0.5176 - val_loss: 0.9720 - val_acc: 0.5139
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9743 - acc: 0.5114 - val_loss: 0.9645 - val_acc: 0.5255
 Epoch 5/20
-7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9637 - acc: 0.5232 - val_loss: 0.9632 - val_acc: 0.5124
+7603/7603 [==============================] - 21s 3ms/sample - loss: 0.9594 - acc: 0.5227 - val_loss: 0.9798 - val_acc: 0.5071
 Epoch 6/20
-7603/7603 [==============================] - 21s 3ms/sample - loss: 0.9442 - acc: 0.5393 - val_loss: 0.9694 - val_acc: 0.5224
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9368 - acc: 0.5414 - val_loss: 0.9567 - val_acc: 0.5187
 Epoch 7/20
-7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9271 - acc: 0.5499 - val_loss: 0.9629 - val_acc: 0.5218
+7603/7603 [==============================] - 21s 3ms/sample - loss: 0.9235 - acc: 0.5477 - val_loss: 0.9615 - val_acc: 0.5192
 Epoch 8/20
-7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9086 - acc: 0.5679 - val_loss: 0.9565 - val_acc: 0.5203
-Epoch 9/20
-7603/7603 [==============================] - 20s 3ms/sample - loss: 0.8766 - acc: 0.5835 - val_loss: 0.9453 - val_acc: 0.5460
-Epoch 10/20
-7603/7603 [==============================] - 21s 3ms/sample - loss: 0.8523 - acc: 0.6040 - val_loss: 0.9598 - val_acc: 0.5255
-Epoch 11/20
-7603/7603 [==============================] - 22s 3ms/sample - loss: 0.8273 - acc: 0.6159 - val_loss: 0.9574 - val_acc: 0.5355
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.8978 - acc: 0.5690 - val_loss: 0.9690 - val_acc: 0.5250
+1901/1901 - 1s - loss: 0.9690 - acc: 0.5250
+
+# Evaluate on test data
+1056/1056 [==============================] - 1s 886us/sample - loss: 0.9875 - acc: 0.4953
+test loss, test acc: [0.9874742735515941, 0.49526516]
 ```
 
-![CNN results with data augmentation techniques](./res/img/cnn_result_with_data_aug.png)
-
+![CNN results with data augmentation techniques - loss](./res/img/cnn_loss_with.png)
+![CNN results with data augmentation techniques - accuracy](./res/img/cnn_acc_with.png)
 
 /!\ Mettre les résultats
 
