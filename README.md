@@ -7,7 +7,7 @@ This portfolio will describe all the activities that I did in the minor Applied 
 ![The Hague University of Applied Science](./res/img/svgexport-41.svg)
      
 In this minor, I worked in a team of 7 fellow students and one teacher on a research project for the LUMC.
-The research report can be [found here](./res/pdf/).
+The research report can be [found here](./res/pdf/Ortho_Eyes_Paper.pdf).
 
 # Table of Contents
 - [1. Self-development](#1-self-development)
@@ -30,6 +30,7 @@ The research report can be [found here](./res/pdf/).
         - [4. Convolutional neural network (CNN) - Data augmentation](#324-convolutional-neural-network-cnn---data-augmentation)
             - [Evaluation](#evaluation)
     - [3. Presentation](#33-presentations)
+    - [4. Conclusion](#34-conclusion)
     
 # 1. Self-development
 
@@ -146,7 +147,9 @@ Category_2/1/AB1.csv
 ### 3.1.2 Project status at the beginning of the course
 
 At the begin of this minor, we had to read the research paper and understand what the previous group did.
-The previous group did not know the name of the exercises. 
+The previous group did not know the name of the exercises. So they created their own labels (Alpha, Beta, Charlie, Delta, etc.)
+The previous group create a super cleaned dataset where they remove the idle time of each exercise.
+The results of the classification they use was 97.7% with the super cleaned data.
 
 # 3.2 Our research
 
@@ -159,10 +162,21 @@ With the converted dataset, we created a cleaned dataset.
 ## 3.2.1 Figure out how the X,Y and Z planes are used in the data
 ![Task on Azure Scrum Board](./res/img/task-understand-how-planes-are-used.png)
 
+In the first weeks, we had to understand the data and how can we use it to get a 3D visualisation.    
+My task was to understand how we can use the euler angles of each bone.
+LUMC's contact told us that the euler angles were defined using the [WU standard](./res/pdf/Wu%20et%20al%20J%20Biomech%2038%20(2005)%20981–992.pdf).
+We learn that all angles are degrees. And we learn, how each bone behaves in each plane (frontal, sagittal and transverse).
+
 ## 3.2.2 Multiple exercises detection script
+
+Visualizing converted data showed several recordings contained more than one exercise.
+We wanted each file to contain only one times of an exercise and not several. This allows to have more exercises to train the model. 
 
 The Notebook can be found [here](./res/notebooks/Multiple%20Exercises%20Detection.ipynb)    
 The script can be found [here](https://dev.azure.com/DataScienceMinor/_git/Data%20Science?path=%2FMutlipleExercisesDetectionV2.py)
+
+
+After spending 2 weeks and a half coding this script, I decided to stop the development because the files containing several times the same exercise had to be split and running out of time, so I decided to do the [verification by hand](#323-split-the-data).
 
 ## 3.2.3 Split the data
 
@@ -210,7 +224,8 @@ To complete this task, I performed these steps for each file in the dataset:
 - Finally, set the column 'Check' to 'YES'. This is just to track where we are in the file check.
 
 Here is the [result in Excel format](./res/sheet/Patients.xlsx).  
-*Only the files of the AB, AF, EH, EL & RF exercises were checked
+*Only the files of the AB, AF, EH, EL & RF exercises were checked                  
+When I check all the files, I noticed that some exercises contains some errors. So, I chose to note these errors in the excel, You can find some annotations if the exercise contains some anomalies like only the sensors on the right side are used or the ground sensor is moving.
 
 Before the split, we had:   
 
@@ -488,7 +503,7 @@ test loss, test acc: [0.9874742735515941, 0.49526516]
 ## Evaluation
 
 We can noticed that the model is still overfitting the data after the data augmentation. We also can see that the model overfitting the data early in the learning after the data augmentation, without the data augmentation the model start overfitting at the epoch 10 and with the data augmentation the model start overfitting at the epoch 4.
-We can conclude that using data augmentation is not useful for this case. Maybe by using data augmentation, we remove some useful characteristics from the data that the models need to 
+We can conclude that using data augmentation is not useful for this case. Maybe by using data augmentation, we remove some useful characteristics from the data that the models need to predicts the right category.
 
 ## 3.3 Presentations
 
@@ -498,3 +513,8 @@ During each sprint we gave some presentations as a group, one every week. I myse
 Before the October holidays, I gave a presentation on unsupervised learning.    
 The aim of this presentation was to give an overview of unsupervised learning (the different types of unsupervised learning algorithms, tools such as the elbow method to determine the optimal number of clusters, etc.).
 - [Presentation of Unsupervised learning](./res/presentations/Unsupervised_learning.pptx)
+
+## 3.4 Conclusion
+
+Thanks to this project, I was able to get interested in different data science techniques. It allowed me to improve my knowledge with the Python language and also to improve my English by working only in English.     
+However, doing software engineering studies, I prefer to have specific tasks to work on instead of having to do research.
