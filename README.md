@@ -145,6 +145,9 @@ Category_2/1/AB1.csv
 
 ### 3.1.2 Project status at the beginning of the course
 
+At the begin of this minor, we had to read the research paper and understand what the previous group did.
+The previous group did not know the name of the exercises. 
+
 # 3.2 Our research
 
 The purpose of this research is the following:
@@ -175,6 +178,8 @@ To do this, I use the 3D Visualisation made by Raphaël.
 ![GIF for visualization](./res/img/visualization.gif)
 
 In order to complete this task, I made a useful visualization which is able to display the 3 euler axes for each bone.
+The script can be found [here](./res/scripts/VisualizeExercise.py).                         
+You can find the notebook [here](./res/notebooks/Visualisation%20of%20all%20axis.ipynb).    
 
 ##### Here are a few examples with the command use and the output of the script: 
 ```shell script
@@ -239,6 +244,9 @@ We chose to use data augmentation techniques to fix the overfitting issue becaus
 
 The goal of data augmentation is to increase the amount of data by using techniques like cropping, padding, flipping, etc.
 Data augmentation makes the model more robust to slight variations, and hence prevents the model from overfitting.
+
+Before going any further, we transform the exercises with euler angles to pictures like this:  
+![image](./res/img/data-resampled-color.png)
 
 Before implementing data augmentation in the project. I made a small script to understand how it's works and in what way we can implement those techniques.
 
@@ -479,7 +487,8 @@ test loss, test acc: [0.9874742735515941, 0.49526516]
 
 ## Evaluation
 
-/!\ Mettre les résultats
+We can noticed that the model is still overfitting the data after the data augmentation. We also can see that the model overfitting the data early in the learning after the data augmentation, without the data augmentation the model start overfitting at the epoch 10 and with the data augmentation the model start overfitting at the epoch 4.
+We can conclude that using data augmentation is not useful for this case. Maybe by using data augmentation, we remove some useful characteristics from the data that the models need to 
 
 ## 3.3 Presentations
 
@@ -488,4 +497,4 @@ During each sprint we gave some presentations as a group, one every week. I myse
 
 Before the October holidays, I gave a presentation on unsupervised learning.    
 The aim of this presentation was to give an overview of unsupervised learning (the different types of unsupervised learning algorithms, tools such as the elbow method to determine the optimal number of clusters, etc.).
-- [Presentation](./res/presentations/Unsupervised_learning.pptx)
+- [Presentation of Unsupervised learning](./res/presentations/Unsupervised_learning.pptx)
