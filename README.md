@@ -214,13 +214,13 @@ After the split, we had:
 | 3 | 362 |
 | 4 | 292 |
 
-By splitting the files the number of exercises for categories 2 and 3 was almost doubled.
+By splitting the files, the number of exercises for categories 2 and 3 was almost doubled.
 
 ## 3.2.4 Convolutional neural network (CNN) - Data augmentation
 
 In addition to validating the results of the previous group, we started looking for another technique of machine learning. We chose to explore what convolutional neural networks (CNN) could do with our dataset.
 
-Hassane was working on that task and he was faced with a overfitting problem with his model.
+Hassan was working on that task and he was faced with a overfitting problem with his model.
 He asked me to help him to implement some data augmentation techniques.
 We chose to use data augmentation techniques to fix the overfitting issue because the dataset was too small to be use with a Convolutional neural network.
 
@@ -232,7 +232,7 @@ Before implementing data augmentation in the project. I made a small script to u
 The script can be found [here](./res/scripts/data_augmentation.py)          
 The notebook can be found [here](./res/notebooks/Data%20Augmentation%20-%20CNN.ipynb)
 
-Script results:
+### Script results:
 #### Original image:
 ![Data augmentation - Original Skeleton](./res/img/skeleton.png)
 
@@ -246,6 +246,7 @@ def data_Augment(data_generator, images, limit=10):
     """
     Generates n image from an image by applying various transformations such as rotation, zoom, etc.
     :param data_generator: ImageDataGenerator
+    :param images: Dataset of images
     :param limit: Number of images to generate
     :return: Array of picture
     """
@@ -254,7 +255,6 @@ def data_Augment(data_generator, images, limit=10):
     genarated_data = np.array([image_iterator.next()[0]])
     limit -= 1
     for image in image_iterator:
-        # genarated_data = np.append((genarated_data, [image[0]]), axis=0)
         genarated_data = np.append(genarated_data, [image[0]], axis=0)
         limit -= 1
         if limit <= 0:
@@ -264,7 +264,212 @@ def data_Augment(data_generator, images, limit=10):
     return genarated_data
 ```
 
+Results before the implementation of data augmentation techniques:
+
+```text
+python src/cnn_model.py
+WARNING:tensorflow:From /home/brice/anaconda3/envs/Python-test/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_1
+  0%|                                                                              | 0/30 [00:00<?, ?it/s]OMP: Info #212: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #210: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-3
+OMP: Info #156: KMP_AFFINITY: 4 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #179: KMP_AFFINITY: 1 packages x 2 cores/pkg x 2 threads/core (2 total cores)
+OMP: Info #214: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 1 thread 1 
+OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8464 thread 0 bound to OS proc set 0
+100%|█████████████████████████████████████████████████████████████████████| 30/30 [00:04<00:00,  6.69it/s]
+Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_2
+100%|█████████████████████████████████████████████████████████████████████| 39/39 [00:05<00:00,  7.48it/s]
+Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_3
+100%|█████████████████████████████████████████████████████████████████████| 37/37 [00:04<00:00,  7.45it/s]
+OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8514 thread 1 bound to OS proc set 1
+(760, 100, 16, 3) (106, 100, 16, 3) (190, 100, 16, 3)
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+block1_conv1 (Conv2D)        (None, 100, 16, 64)       2944      
+_________________________________________________________________
+block1_pool (MaxPooling2D)   (None, 50, 8, 64)         0         
+_________________________________________________________________
+dropout (Dropout)            (None, 50, 8, 64)         0         
+_________________________________________________________________
+block2_conv1 (Conv2D)        (None, 50, 8, 64)         61504     
+_________________________________________________________________
+block2_pool (MaxPooling2D)   (None, 25, 4, 64)         0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 25, 4, 64)         0         
+_________________________________________________________________
+flatten (Flatten)            (None, 6400)              0         
+_________________________________________________________________
+dense (Dense)                (None, 256)               1638656   
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 256)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 3)                 771       
+=================================================================
+Total params: 1,703,875
+Trainable params: 1,703,875
+Non-trainable params: 0
+_________________________________________________________________
+Train on 760 samples, validate on 190 samples
+2020-01-16 07:15:32.798674: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-01-16 07:15:32.834774: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2899500000 Hz
+2020-01-16 07:15:32.834924: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5595db3ceb00 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-01-16 07:15:32.834937: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-01-16 07:15:32.835329: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+Epoch 1/20
+OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8527 thread 2 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8530 thread 3 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8531 thread 4 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8528 thread 5 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8533 thread 7 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8532 thread 6 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 8464 tid 8534 thread 8 bound to OS proc set 0
+760/760 [==============================] - 3s 3ms/sample - loss: 1.1280 - acc: 0.3632 - val_loss: 1.0638 - val_acc: 0.4895
+Epoch 2/20
+760/760 [==============================] - 2s 3ms/sample - loss: 1.0356 - acc: 0.4382 - val_loss: 0.9678 - val_acc: 0.4947
+Epoch 3/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.8914 - acc: 0.5789 - val_loss: 0.8165 - val_acc: 0.6842
+Epoch 4/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.8133 - acc: 0.6158 - val_loss: 0.7870 - val_acc: 0.6789
+Epoch 5/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.7812 - acc: 0.6421 - val_loss: 0.7872 - val_acc: 0.6632
+Epoch 6/20
+760/760 [==============================] - 2s 2ms/sample - loss: 0.7448 - acc: 0.6553 - val_loss: 0.7366 - val_acc: 0.6526
+Epoch 7/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.7103 - acc: 0.6763 - val_loss: 0.7332 - val_acc: 0.6632
+Epoch 8/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.7010 - acc: 0.6763 - val_loss: 0.7256 - val_acc: 0.6579
+Epoch 9/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.6654 - acc: 0.7013 - val_loss: 0.7033 - val_acc: 0.6737
+Epoch 10/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.6250 - acc: 0.7039 - val_loss: 0.6672 - val_acc: 0.6368
+Epoch 11/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.5614 - acc: 0.7553 - val_loss: 0.6730 - val_acc: 0.6737
+Epoch 12/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.5396 - acc: 0.7671 - val_loss: 0.6329 - val_acc: 0.6842
+Epoch 13/20
+760/760 [==============================] - 2s 2ms/sample - loss: 0.4940 - acc: 0.7737 - val_loss: 0.6243 - val_acc: 0.6895
+Epoch 14/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.4359 - acc: 0.8211 - val_loss: 0.6600 - val_acc: 0.6737
+Epoch 15/20
+760/760 [==============================] - 2s 3ms/sample - loss: 0.3957 - acc: 0.8382 - val_loss: 0.6418 - val_acc: 0.7053
+```
+
+![CNN results without data augmentation techniques](./res/img/cnn_result_without_data_aug.png)
+
+Results after the implementation of data augmentation techniques:
+
+```text
+python src/cnn_model.py
+WARNING:tensorflow:From /home/brice/anaconda3/envs/Python-test/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_1
+  0%|                                                                              | 0/30 [00:00<?, ?it/s]OMP: Info #212: KMP_AFFINITY: decoding x2APIC ids.
+OMP: Info #210: KMP_AFFINITY: Affinity capable, using global cpuid leaf 11 info
+OMP: Info #154: KMP_AFFINITY: Initial OS proc set respected: 0-3
+OMP: Info #156: KMP_AFFINITY: 4 available OS procs
+OMP: Info #157: KMP_AFFINITY: Uniform topology
+OMP: Info #179: KMP_AFFINITY: 1 packages x 2 cores/pkg x 2 threads/core (2 total cores)
+OMP: Info #214: KMP_AFFINITY: OS proc to physical thread map:
+OMP: Info #171: KMP_AFFINITY: OS proc 0 maps to package 0 core 0 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 2 maps to package 0 core 0 thread 1 
+OMP: Info #171: KMP_AFFINITY: OS proc 1 maps to package 0 core 1 thread 0 
+OMP: Info #171: KMP_AFFINITY: OS proc 3 maps to package 0 core 1 thread 1 
+OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8865 thread 0 bound to OS proc set 0
+100%|█████████████████████████████████████████████████████████████████████| 30/30 [00:04<00:00,  6.83it/s]
+Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_2
+100%|█████████████████████████████████████████████████████████████████████| 39/39 [00:05<00:00,  7.22it/s]
+Importing patients from: /home/brice/Documents/Projects/Python/Data_Science/data-clean/Category_3
+100%|█████████████████████████████████████████████████████████████████████| 37/37 [00:05<00:00,  7.13it/s]
+OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8923 thread 1 bound to OS proc set 1
+(7603, 100, 16, 3) (1056, 100, 16, 3) (1901, 100, 16, 3)
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+block1_conv1 (Conv2D)        (None, 100, 16, 64)       2944      
+_________________________________________________________________
+block1_pool (MaxPooling2D)   (None, 50, 8, 64)         0         
+_________________________________________________________________
+dropout (Dropout)            (None, 50, 8, 64)         0         
+_________________________________________________________________
+block2_conv1 (Conv2D)        (None, 50, 8, 64)         61504     
+_________________________________________________________________
+block2_pool (MaxPooling2D)   (None, 25, 4, 64)         0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 25, 4, 64)         0         
+_________________________________________________________________
+flatten (Flatten)            (None, 6400)              0         
+_________________________________________________________________
+dense (Dense)                (None, 256)               1638656   
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 256)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 3)                 771       
+=================================================================
+Total params: 1,703,875
+Trainable params: 1,703,875
+Non-trainable params: 0
+_________________________________________________________________
+Train on 7603 samples, validate on 1901 samples
+2020-01-16 07:21:46.158279: I tensorflow/core/platform/cpu_feature_guard.cc:145] This TensorFlow binary is optimized with Intel(R) MKL-DNN to use the following CPU instructions in performance critical operations:  SSE4.1 SSE4.2 AVX AVX2 FMA
+To enable them in non-MKL-DNN operations, rebuild TensorFlow with the appropriate compiler flags.
+2020-01-16 07:21:46.206748: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2899500000 Hz
+2020-01-16 07:21:46.207503: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55e3f0055360 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-01-16 07:21:46.207518: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-01-16 07:21:46.208483: I tensorflow/core/common_runtime/process_util.cc:115] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+Epoch 1/20
+OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8961 thread 2 bound to OS proc set 2
+OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8963 thread 3 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8964 thread 4 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8960 thread 5 bound to OS proc set 1
+OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8967 thread 8 bound to OS proc set 0
+OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8966 thread 7 bound to OS proc set 3
+OMP: Info #250: KMP_AFFINITY: pid 8865 tid 8965 thread 6 bound to OS proc set 2
+7603/7603 [==============================] - 20s 3ms/sample - loss: 1.0316 - acc: 0.4557 - val_loss: 1.0056 - val_acc: 0.4887
+Epoch 2/20
+7603/7603 [==============================] - 20s 3ms/sample - loss: 1.0037 - acc: 0.4961 - val_loss: 0.9960 - val_acc: 0.5066
+Epoch 3/20
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9889 - acc: 0.5045 - val_loss: 0.9730 - val_acc: 0.5203
+Epoch 4/20
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9735 - acc: 0.5176 - val_loss: 0.9720 - val_acc: 0.5139
+Epoch 5/20
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9637 - acc: 0.5232 - val_loss: 0.9632 - val_acc: 0.5124
+Epoch 6/20
+7603/7603 [==============================] - 21s 3ms/sample - loss: 0.9442 - acc: 0.5393 - val_loss: 0.9694 - val_acc: 0.5224
+Epoch 7/20
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9271 - acc: 0.5499 - val_loss: 0.9629 - val_acc: 0.5218
+Epoch 8/20
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.9086 - acc: 0.5679 - val_loss: 0.9565 - val_acc: 0.5203
+Epoch 9/20
+7603/7603 [==============================] - 20s 3ms/sample - loss: 0.8766 - acc: 0.5835 - val_loss: 0.9453 - val_acc: 0.5460
+Epoch 10/20
+7603/7603 [==============================] - 21s 3ms/sample - loss: 0.8523 - acc: 0.6040 - val_loss: 0.9598 - val_acc: 0.5255
+Epoch 11/20
+7603/7603 [==============================] - 22s 3ms/sample - loss: 0.8273 - acc: 0.6159 - val_loss: 0.9574 - val_acc: 0.5355
+```
+
+![CNN results with data augmentation techniques](./res/img/cnn_result_with_data_aug.png)
+
+
+/!\ Mettre les résultats
+
 ## 3.3 Presentations
 
 During each sprint we gave some presentations as a group, one every week. I myself made the following presentation with a team member:
 - [Presentation week 14](./res/presentations/16-december.pptx)
+
+Before the October holidays, I gave a presentation on unsupervised learning.    
+The aim of this presentation was to give an overview of unsupervised learning (the different types of unsupervised learning algorithms, tools such as the elbow method to determine the optimal number of clusters, etc.).
+- [Presentation](./res/presentations/Unsupervised_learning.pptx)
