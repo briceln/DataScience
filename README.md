@@ -517,4 +517,8 @@ The aim of this presentation was to give an overview of unsupervised learning (t
 ## 3.4 Conclusion
 
 Thanks to this project, I was able to get interested in different data science techniques. It allowed me to improve my knowledge with the Python language and also to improve my English by working only in English.     
-However, doing software engineering studies, I prefer to have specific tasks to work on instead of having to do research.
+However, I doing software engineering studies, I prefer to have specific tasks to work on instead of having to do research.
+
+My main focus for this project has been on data manipulation and data understanding and helps other people in the group with their code-related problems.
+
+Based on the results obtained, I suggest looking to use a more complex model that would be able to find the characteristics that allow to separate category 2 and 3 and try to fix the category 4 with the LUMC.
